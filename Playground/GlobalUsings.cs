@@ -1,0 +1,12 @@
+﻿global using Fun;
+global using static Fun.Extensions;
+global using MathematicalProgramming;
+global using MathematicalProgrammingCplex;
+global using static MathematicalProgramming.Extensions;
+global using Modo;
+global using ModoCplex;
+global using System;
+global using System.Collections;
+global using System.Collections.Generic;
+global using System.Diagnostics;
+global using System.Linq;

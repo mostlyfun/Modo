@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageProjectUrl>https://github.com/mostlyfun/Modo</PackageProjectUrl>
+    <Authors>mostlyfun</Authors>
+    <Company>mostlyfun</Company>
+    <RepositoryUrl>https://github.com/mostlyfun/Modo</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>Multiobjective, discrete, optimization, pareto, nondominated, cplex, mip</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MathematicalProgrammingCplex" Version="0.0.1" />
+    <PackageReference Include="Modo" Version="0.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="ILOG.Concert">
+      <HintPath>..\..\cplex-lib\ILOG.Concert.dll</HintPath>
+    </Reference>
+    <Reference Include="ILOG.CPLEX">
+      <HintPath>..\..\cplex-lib\ILOG.CPLEX.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageProjectUrl>https://github.com/mostlyfun/Modo</PackageProjectUrl>
+    <Company>mostlyfun</Company>
+    <Authors>mostlyfun</Authors>
+    <RepositoryUrl>https://github.com/mostlyfun/Modo</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>Multiobjective, discrete, optimization, pareto, nondominated</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Fun.Pipe" Version="0.0.1" />
+    <PackageReference Include="MathematicalProgramming" Version="0.0.1" />
+  </ItemGroup>
+
+</Project>
