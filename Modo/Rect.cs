@@ -80,7 +80,7 @@ public readonly struct Rect : IEquatable<Rect>
     {
         if (obj == null)
             return false;
-        else if (obj is Rect)
+        if (obj is Rect)
             return Equals((Rect)obj);
         return false;
     }

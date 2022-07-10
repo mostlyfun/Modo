@@ -27,7 +27,8 @@ public static class ModoAlgMathProg<M, C, V, B, X> where B : ModelBuilder<M, C, 
         for (int j = 0; j < dim; j++)
         {
             model.Obj(objType, objectives[j]);
-            var (_, isFeas) = model.BuildAndSolve(builder);
+            // todo: better error handling needed here!
+            var (_, isFeas) = model.BuildAndSolve(builder).Unwrap();
             if (!isFeas)
                 throw new ArgumentException("Failed to compute lower bound for objective " + j);
             vertex[j] = builder.GetVal1(objectives)[j];
@@ -56,7 +57,8 @@ public static class ModoAlgMathProg<M, C, V, B, X> where B : ModelBuilder<M, C, 
                 model[boundConstraintNames[j]] = objectives[j] <= (upper[j] - 1.0);
             model[boundConstraintNames[upper.Length]] = dummyVar >= 0;
 
-            var (_, isFeas) = model.BuildAndSolve(builder);
+            // todo: better error handling needed here!
+            var (_, isFeas) = model.BuildAndSolve(builder).Unwrap();
             if (!isFeas)
                 return None<(X, double[])>();
             var objValsP = builder.GetVal1(objectives);
@@ -66,7 +68,8 @@ public static class ModoAlgMathProg<M, C, V, B, X> where B : ModelBuilder<M, C, 
             model.Obj(ObjType.Minimize, sumOfObjectives);
             model[boundConstraintNames[upper.Length]] = objectives[dim] == zStar;
 
-            (_, isFeas) = model.BuildAndSolve(builder);
+            // todo: better error handling needed here!
+            (_, isFeas) = model.BuildAndSolve(builder).Unwrap();
             if (!isFeas)
                 return None<(X, double[])>();
 

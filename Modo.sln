@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modo", "Modo\Modo.csproj", "{121A5EFD-85CB-4A50-A204-26A6AC0FEE6E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modo", "Modo\Modo.csproj", "{121A5EFD-85CB-4A50-A204-26A6AC0FEE6E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModoCplex", "ModoCplex\ModoCplex.csproj", "{599E23FC-0F2A-46FF-9692-6CC1766B7BBC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModoCplex", "ModoCplex\ModoCplex.csproj", "{599E23FC-0F2A-46FF-9692-6CC1766B7BBC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Playground", "Playground\Playground.csproj", "{B5F45640-7E49-4AA8-A860-6C817D331EBE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Playground", "Playground\Playground.csproj", "{B5F45640-7E49-4AA8-A860-6C817D331EBE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
