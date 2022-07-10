@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modo", "Modo\Modo.csproj", "{121A5EFD-85CB-4A50-A204-26A6AC0FEE6E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModoCplex", "ModoCplex\ModoCplex.csproj", "{599E23FC-0F2A-46FF-9692-6CC1766B7BBC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{121A5EFD-85CB-4A50-A204-26A6AC0FEE6E} = {121A5EFD-85CB-4A50-A204-26A6AC0FEE6E}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Playground", "Playground\Playground.csproj", "{B5F45640-7E49-4AA8-A860-6C817D331EBE}"
 EndProject

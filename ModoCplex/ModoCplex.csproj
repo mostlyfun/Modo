@@ -16,7 +16,7 @@
   <ItemGroup>
     <PackageReference Include="MathematicalProgramming" Version="0.0.5" />
     <PackageReference Include="MathematicalProgrammingCplex" Version="0.0.5" />
-    <PackageReference Include="Modo" Version="0.0.4" />
+    <PackageReference Include="Modo" Version="0.0.5" />
   </ItemGroup>
 
   <ItemGroup>
