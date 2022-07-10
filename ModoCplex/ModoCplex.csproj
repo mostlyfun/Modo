@@ -14,9 +14,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MathematicalProgramming" Version="0.0.5" />
-    <PackageReference Include="MathematicalProgrammingCplex" Version="0.0.5" />
-    <PackageReference Include="Modo" Version="0.0.5" />
+    <PackageReference Include="MathematicalProgramming" Version="0.0.6" />
+    <PackageReference Include="MathematicalProgrammingCplex" Version="0.0.6" />
+    <PackageReference Include="Modo" Version="0.0.6" />
   </ItemGroup>
 
   <ItemGroup>
