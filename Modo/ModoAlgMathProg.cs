@@ -1,4 +1,7 @@
-﻿namespace Modo;
+﻿//using ILOG.CPLEX;
+using System.Text;
+
+namespace Modo;
 
 public static class ModoAlgMathProg<M, C, V, B, X> where B : ModelBuilder<M, C, V>
 {
@@ -26,14 +29,22 @@ public static class ModoAlgMathProg<M, C, V, B, X> where B : ModelBuilder<M, C, 
         var vertex = new double[dim];
         for (int j = 0; j < dim; j++)
         {
-            model.Obj(objType, objectives[j]);
+            var singleObj = objectives[j];
+            model.Obj(objType, singleObj);
             // todo: better error handling needed here!
-            var (_, isFeas) = model.BuildAndSolve(builder).Unwrap();
+            var (builtModel, isFeas) = model.BuildAndSolve(builder).Unwrap();
+
+            //if (builtModel.GetType() == typeof(Cplex))
+            //{
+            //    ((Cplex)Convert.ChangeType(builtModel, typeof(Cplex))).ExportModel(@"C:\Users\User\Documents\uur\pixie_1.1.2\pixie-backend\PixieApiCs\Playground\bin\Debug\net6.0\tmp\problemcp.lp");
+            //}
+
+            //((Cplex)Convert.ChangeType(builtModel, typeof(Cplex))).ExportModel(@"C:\Users\User\Documents\uur\pixie_1.1.2\pixie-backend\PixieApiCs\morp-data\tmp\problemcp.lp");
+
             if (!isFeas)
                 throw new ArgumentException("Failed to compute lower bound for objective " + j);
             vertex[j] = builder.GetVal1(objectives)[j];
         }
-        Console.WriteLine("\n\n\n" + string.Join('\n', vertex) + "\n\n\n");
         return vertex;
     }
 

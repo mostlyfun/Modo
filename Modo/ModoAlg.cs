@@ -30,7 +30,7 @@ public class ModoAlg<X>
         var L = new List<(Rect Rect, double Prio)> { (BoundingRect, 0) };
         while (L.Count > 0)
         {
-            Console.WriteLine(yN.Count);
+            //Console.WriteLine(yN.Count);
             var first = L.OrderByDescending(x => x.Prio).First();
             var Li = first.Rect;
             var ui = Li.Upper;
